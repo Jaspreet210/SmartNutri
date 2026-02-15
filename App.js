@@ -15,7 +15,8 @@ import { File } from 'expo-file-system';
 
 // --- CONFIGURATION ---
 // IMPORTANT: Replace with your actual Gemini API Key
-const API_KEY = "AIzaSyAB7DUyHMSlZsBwJznoIwRBtTT2XVwPs9o"; 
+// Remove the old hardcoded string
+const API_KEY = process.env.EXPO_PUBLIC_GEMINI_API_KEY; 
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 export default function App() {

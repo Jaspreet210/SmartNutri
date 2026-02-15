@@ -13,23 +13,33 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yourname.smartnutri"
+      "bundleIdentifier": "com.yourname.smartnutri",
+      "infoPlist": {
+        "NSCameraUsageDescription": "SmartNutri needs access to your camera."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.yourname.smartnutri"
+      "package": "com.yourname.smartnutri",
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
     },
     "plugins": [
-  [
-    "react-native-vision-camera",
-    {
-      "cameraPermissionText": "SmartNutri needs access to your camera."
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "SmartNutri needs access to your camera."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "18f35499-1eb9-458a-adf1-9e17d78b0ac8"
+      }
     }
-  ]
-  
-]
   }
 }
